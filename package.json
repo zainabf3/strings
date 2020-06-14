@@ -52,15 +52,5 @@
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
     "shortid": "^2.2.15"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zainabf3/Waves.git"
-  },
-  "bugs": {
-    "url": "https://github.com/zainabf3/Waves/issues"
-  },
-  "homepage": "https://github.com/zainabf3/Waves#readme",
-  "description": ""
-}
+  }
+  
