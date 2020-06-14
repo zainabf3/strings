@@ -9,7 +9,6 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-
   },
   "engines": {
     "node": "12.18.0"
@@ -17,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.10.2",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/react-fontawesome": "^0.1.10",
@@ -55,5 +55,4 @@
     "redux-thunk": "^2.3.0",
     "shortid": "^2.2.15"
   }
-  
 }
