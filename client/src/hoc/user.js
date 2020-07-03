@@ -15,6 +15,11 @@ const links = [
         name: 'My Cart',
         linkTo: '/user/cart'
     },
+    {
+        name: "Cancelled Orders",
+        linkTo:"/user/cancel_order"
+        
+    }
 ]
 
 const admin = [

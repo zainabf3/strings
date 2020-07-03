@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UserProductBlock  = ({products,removeItem})=>{
 
@@ -28,7 +29,13 @@ const UserProductBlock  = ({products,removeItem})=>{
                     <div className="item">
                         <h4> Quantity</h4>
                         <div>
-                            {product.quantity}
+                            {product.quantity} 
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
                         </div>
                     </div>
                     <div className="item">
@@ -51,8 +58,13 @@ const UserProductBlock  = ({products,removeItem})=>{
 
 
     return(
+        
         <div>
-              {renderItems()}
+        <div>
+        <Link to="/shop">Back to Guitars</Link>
+
+        </div>
+ {renderItems()}
         </div>
     );
 };

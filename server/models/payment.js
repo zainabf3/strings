@@ -13,6 +13,7 @@ const paymentSchema = mongoose.Schema({
         type:Array,
         default:[]
     }
+    
 })
 
 const Payment = mongoose.model('Payment',paymentSchema);

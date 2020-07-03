@@ -20,6 +20,8 @@ import UserCart from './components/User/cart';
 import UpdateProfile from './components/User/update_profile';
 import ManageSite from "./components/User/Admin/manage_site_nfo";
 import AddFile from "./components/User/Admin/add_file";
+import CancelOrder  from "./components/User/CancelOrders";
+
 
 import PageNotFound from "./components/utils/page_not_found";
 
@@ -30,6 +32,8 @@ const Routes = () => {
         <Route path="/user/dashboard" exact component={Auth(UserDashboard,true)}/>
         <Route path="/user/cart" exact component={Auth(UserCart,true)}/>
         <Route path="/user/user_profile" exact component={Auth(UpdateProfile,true)}/>
+        <Route path="/user/cancel_order/:porder " exact component={Auth(CancelOrder,true)}/>
+
         <Route path="/admin/add_product" exact component={Auth(AddProduct,true)}/>
         <Route path="/admin/manage_categories" exact component={Auth(ManageCategories,true)}/>
         <Route path="/admin/site_info" exact component={Auth(ManageSite,true)}/>

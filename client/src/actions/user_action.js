@@ -9,7 +9,8 @@ import {
     REMOVE_CART_ITEM_USER,
     ON_SUCCESS_BUY_USER,
     UPDATE_DATA_USER,
-    CLEAR_UPDATE_USER_DATA
+    CLEAR_UPDATE_USER_DATA,
+    CANCEL_ORDER
 } from './types';
 
 import { USER_SERVER, PRODUCT_SERVER } from '../components/utils/misc';
@@ -146,5 +147,13 @@ export function clearUpdateUser(){
     return {
         type: CLEAR_UPDATE_USER_DATA,
         payload: ''
+    }
+}
+
+
+export function cancelOrder(_id){
+    return{
+        type: CANCEL_ORDER,
+        payload: ""
     }
 }

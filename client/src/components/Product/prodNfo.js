@@ -1,5 +1,6 @@
 import React from 'react';
 import MyButton from '../utils/button';
+import { connect } from 'react-redux';
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faTruck from '@fortawesome/fontawesome-free-solid/faTruck';
@@ -34,9 +35,11 @@ const ProdNfo = (props) => {
                     <div className="tag_text">
                         <div>Not Available</div>
                         <div>Preorder only</div>
-                    </div>
-                </div>
-            }
+                        <div>{detail.available}</div>
+                   </div>
+                   </div> 
+                }
+              
         </div>
     )
 
@@ -46,9 +49,13 @@ const ProdNfo = (props) => {
             <div className="cart">
                 <MyButton
                     type="add_to_cart_link"
-                    runAction={()=>{
+                    runAction={()=>{ 
+                        props.user.userData.isAuth ?
                        props.addToCart(detail._id)
-                    }}
+                       : 
+                       alert('you need to log in') 
+                       }}
+                 
                 />
             </div>
         </div>
@@ -82,5 +89,10 @@ const ProdNfo = (props) => {
         </div>
     );
 };
+const mapStateToProps = (state) => {
+    return {
+        user: state.user
+    }
+}
 
-export default ProdNfo;
+export default connect (mapStateToProps) (ProdNfo);

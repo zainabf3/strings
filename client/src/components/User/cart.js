@@ -9,9 +9,9 @@ import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faFrown from "@fortawesome/fontawesome-free-solid/faFrown";
 import faSmile from "@fortawesome/fontawesome-free-solid/faSmile"; 
 
-// import RazorPay from "../utils/razorPay";
+
 import PayPal from "../utils/paypal";
-/// paypal token
+
 
 class UserCart extends Component{
 
@@ -53,6 +53,7 @@ calculateTotal = (cartDetail) =>{
      showTotal: true
  });
 }
+//remove from cart//
 
 removeFromCart = (id)=> {
  this.props.dispatch(removeCartItem(id))

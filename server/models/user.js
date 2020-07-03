@@ -37,10 +37,17 @@ const userSchema = mongoose.Schema({
         type:Array,
         default: []
     },
+     /////////////
+     orderCancelled:{
+        type:Boolean,
+        required: true
+    },
+    ////////////////
     role:{
         type:Number,
         default:0
     },
+   
     token:{
         type:String
     },

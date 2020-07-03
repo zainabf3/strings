@@ -104,8 +104,7 @@ app.get('/api/users/admin_files',auth,admin,(req,res)=>{
 
 app.get('/api/users/download/:id',auth,admin,(req,res)=>{
     const file = path.resolve(".")+`/uploads/${req.params.id}`;
-    res.download(file + "Downloads" , "Downloads");
-}) 
+    res.download(file)}) 
 
 
 //=================================
@@ -568,6 +567,17 @@ app.post("/api/site/site_data",auth,admin,(req,res)=>{
         }
     )
 })
+//=================================
+// Cancel Order 
+//===============================
+// app.get("/api/user/cancelOrder",auth,(req,res)=>{
+
+
+    
+// })
+
+
+
 // DEFAULT 
 if( process.env.NODE_ENV === 'production' ){
     const path = require('path');

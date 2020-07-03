@@ -4,7 +4,6 @@ import MyButton from '../utils/button';
 import UserHistoryBlock from "../utils/User/history_block";
 
 
-
 const UserDashboard = ({user}) => {
     return (
         <UserLayout>
@@ -35,7 +34,7 @@ const UserDashboard = ({user}) => {
                      </div>
                     :null
                  }
-
+                
                
                 
             </div>
@@ -44,4 +43,6 @@ const UserDashboard = ({user}) => {
     );
 };
 
-export default UserDashboard;
+
+
+export default (UserDashboard);

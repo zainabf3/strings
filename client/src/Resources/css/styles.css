@@ -202,6 +202,23 @@ color: red ;
 /*============================
             BUTTONS
 ==============================*/
+
+.cancel_order_btn{
+    cursor: pointer;
+    background: #940f06;
+    display: inline-block;
+    padding: 2px 2px;
+    color: #ffffff;
+    margin-top: 50px;
+    position: relative;
+    border: 2px solid white ; 
+}
+.cancel_order_btn:hover{
+    background-color:#ffffff; 
+    color:  #940f06; 
+    border: 2px solid white ; 
+}
+
 .main_heading{
     color: #ffa41b;
 }
@@ -258,7 +275,7 @@ color: red ;
 }
 
 
-
+.cancel_order_btn_link,
 .card_link,
 .bag_link,
 .add_to_cart_link {
@@ -275,6 +292,8 @@ color: red ;
     transition: all 200ms ease-in;
     cursor: pointer;
 }
+.cancel_order_btn_link:hover,
+
 .card_link:hover,
 .bag_link:hover,
 .add_to_cart_link:hover {
@@ -332,6 +351,7 @@ header a {
 
 header .container {
     display: flex;
+    justify-content: space-between;
 }
 
 header .container .left{
@@ -415,7 +435,9 @@ footer .logo {
 
 footer .wrapper {
     display: flex;
-    color:#ee9f29;   
+    color:#ee9f29; 
+    justify-content: center;  
+    align-items: center;
 }
 
 footer .left,
@@ -563,6 +585,12 @@ footer .business_nfo .nfo {
     background-position: center !important;
     background-size: cover !important;
     border: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s linear ;
+}
+.card_item_wrapper .image:hover{
+    transform: scale(1.1);
 }
 
 
@@ -621,7 +649,7 @@ footer .business_nfo .nfo {
 
 .card_item_wrapper.grid_bars .action_container {
     flex-grow: 1;
-    border: 1px solid  #eeeeee;
+    border: 2px solid  #eeeeee;
 }
 
 .card_item_wrapper.grid_bars .description{
@@ -956,7 +984,8 @@ footer .business_nfo .nfo {
 
 .admin_category_wrapper {
     padding-bottom: 50px;
-    border-bottom: 4px solid #e9e9e9;
+    border-bottom: 4px solid #ffa41b;
+    /* #e9e9e9; */
 }
 
 .admin_two_column {
@@ -1009,3 +1038,8 @@ footer .business_nfo .nfo {
     background-position: center center !important;
     border: 1px solid #eaeaea;
 }
+ /* /////// HISTORY CANCEL */
+ .cancel_anchor{
+     color: red;
+ }
+ 

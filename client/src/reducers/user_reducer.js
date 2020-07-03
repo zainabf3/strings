@@ -8,7 +8,8 @@ import {
     REMOVE_CART_ITEM_USER,
     ON_SUCCESS_BUY_USER,
     UPDATE_DATA_USER,
-    CLEAR_UPDATE_USER_DATA
+    CLEAR_UPDATE_USER_DATA,
+    CANCEL_ORDER
 } from '../actions/types';
 
 
@@ -51,8 +52,10 @@ export default function(state={},action){
         case UPDATE_DATA_USER:
             return {...state,updateUser: action.payload}
         case CLEAR_UPDATE_USER_DATA:
-            return {...state,updateUser: action.payload}
-        default:
+           return {...state,updateUser: action.payload}
+        case CANCEL_ORDER :
+            return{...state}
+           default:
             return state;
     }
 }
